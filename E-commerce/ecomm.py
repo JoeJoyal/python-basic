@@ -2,13 +2,20 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 
+# def countPlot():
+#     fig = plt.figure(figsize=(10, 4))
+#     sns.countplot(x = "year", data = data)
+#     st.pyplot(fig)
 
 def main():
-    st.title("This is app for ecomm I am creating")
-    st.sidebar.title("you can upload your file here")
 
+    st.title("E-commerence Apps - Black Friday Sale")
+    st.sidebar.title("You can upload your file here")
+
+    
     upload_file = st.sidebar.file_uploader("upload your file", type=['csv', 'xlsx'])
 
     if upload_file is not None:
@@ -30,11 +37,26 @@ def main():
             st.subheader("I will show you the bit of stats")
             st.write(data.describe())
 
-            st.write(sns.countplot(x='Gender'))
-
         except Exception as e:
             print(e)
-        
+
+        def countplot():
+            fig = plt.figure(figsize=(10, 4))
+            sns.countplot(x='Gender', data=data)
+            st.pyplot(fig)
+    
+        page = st.sidebar.selectbox(
+            "Select a Chart",
+            [
+                "--select--",
+                "Count Plot",
+                "LIne Plot"
+            ]
+        )
+
+        if page == "Count Plot":
+            countplot()
+
 
 if __name__ == "__main__":
     main()
