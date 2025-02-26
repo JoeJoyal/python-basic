@@ -30,7 +30,7 @@ def main():
             st.subheader("I will show you the bit of stats")
             st.write(data.describe())
 
-            st.write(sns.countplot(data,x='Gender'))
+            st.write(sns.countplot(x='Gender'))
 
         except Exception as e:
             print(e)
