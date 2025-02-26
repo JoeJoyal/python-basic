@@ -25,10 +25,12 @@ def main():
             st.subheader("lets see some more detail data")
             st.write("shape of the data", data.shape)
             st.write("the column name inside data is", data.columns)
-            st.write("missing value into column", data.isnull.sum())
+            st.write("missing value into column", data.isnull().sum())
 
             st.subheader("I will show you the bit of stats")
             st.write(data.describe())
+
+            st.write(sns.countplot(data,x='Gender'))
 
         except Exception as e:
             print(e)
