@@ -50,7 +50,7 @@ def main():
             [
                 "--select--",
                 "Count Plot",
-                "LIne Plot"
+                "Line Plot"
             ]
         )
 
