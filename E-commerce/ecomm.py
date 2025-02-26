@@ -41,15 +41,33 @@ def main():
             print(e)
 
         def countplot():
-            fig = plt.figure(figsize=(10, 4))
+            fig_gender = plt.figure(figsize=(10, 4))
             sns.countplot(x='Gender', data=data)
+            st.pyplot(fig_gender)
+
+            fig_age = plt.figure(figsize=(10, 4))
             sns.countplot(x='Gender', data = data, hue='Age')
+            st.pyplot(fig_age)
+
+            fig_age = plt.figure(figsize=(10, 4))
             sns.countplot(data['Age'])
+            st.pyplot(fig_age)
+
+            fig_cityCategory = plt.figure(figsize=(10, 4))
             sns.countplot(data['City_Category'])
+            st.pyplot(fig_cityCategory)
+
+            fig_maritalStatus = plt.figure(figsize=(10, 4))
             sns.countplot(data['Marital_Status'])
+            st.pyplot(fig_maritalStatus)
+
+            fig_CurrentCity = plt.figure(figsize=(10, 4))
             sns.countplot(data['Stay_In_Current_City_Years'])
+            st.pyplot(fig_CurrentCity)
+
+            fig_Occupation = plt.figure(figsize=(10, 4))
             sns.countplot(data['Occupation'])
-            st.pyplot(fig)
+            st.pyplot(fig_Occupation)
     
         page = st.sidebar.selectbox(
             "Select a Chart",
