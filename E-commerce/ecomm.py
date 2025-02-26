@@ -5,11 +5,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-# def countPlot():
-#     fig = plt.figure(figsize=(10, 4))
-#     sns.countplot(x = "year", data = data)
-#     st.pyplot(fig)
-
 def main():
 
     st.title("Black Friday Sale")
