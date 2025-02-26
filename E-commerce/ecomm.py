@@ -12,11 +12,11 @@ import matplotlib.pyplot as plt
 
 def main():
 
-    st.title("E-commerence Apps - Black Friday Sale")
+    st.title("Black Friday Sale")
     st.sidebar.title("You can upload your file here")
 
     
-    upload_file = st.sidebar.file_uploader("upload your file", type=['csv', 'xlsx'])
+    upload_file = st.sidebar.file_uploader("Upload your file", type=['csv', 'xlsx'])
 
     if upload_file is not None:
         try:
@@ -43,6 +43,12 @@ def main():
         def countplot():
             fig = plt.figure(figsize=(10, 4))
             sns.countplot(x='Gender', data=data)
+            sns.countplot(x='Gender', data = data, hue='Age')
+            sns.countplot(data['Age'])
+            sns.countplot(data['City_Category'])
+            sns.countplot(data['Marital_Status'])
+            sns.countplot(data['Stay_In_Current_City_Years'])
+            sns.countplot(data['Occupation'])
             st.pyplot(fig)
     
         page = st.sidebar.selectbox(
