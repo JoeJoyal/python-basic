@@ -1,7 +1,6 @@
-numpy
-pandas
-matplotlib
-seaborn
 streamlit
-pickle
-pip==25.0.1
+pandas
+numpy
+seaborn
+matplotlib
+openpyxl
