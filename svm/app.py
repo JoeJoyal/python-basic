@@ -18,8 +18,8 @@ def load_models():
         "SVC Binary": 'svm_binary.pkl',
         "SVC Multi": "svm_multi.pkl",
         "Logistic Regression Binary": "logistics_binary.pkl",
-        # "Logistic Regression OVR": "logistics_ovr.pkl",
-        # "Logistic Regression Multinomial": "logistics_multinomial.pkl"
+        "Logistic Regression OVR": "logistics_ovr.pkl",
+        "Logistic Regression Multinomial": "logistics_multinomial.pkl"
     }
     models = {}
 
