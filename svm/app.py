@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-# import pickle
+import pickle
 import os
 from sklearn.datasets import load_iris
 
